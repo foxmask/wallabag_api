@@ -7,8 +7,7 @@ Python API for Wallabag v2
 Requirements :
 ==============
 
-* requests  2.5.0
-
+* requests
 
 Installation:
 =============

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from wallabag_api import __version__ as version
 
 install_requires = [
-    'requests==2.5.0',
+    'requests==2.18.4',
 ]
 
 setup(

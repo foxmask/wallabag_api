@@ -5,7 +5,7 @@ from wallabag import Wallabag
 
 class TestWallabag(unittest.TestCase):
 
-    host = 'http://localhost:8080'
+    host = 'http://bag.foxmask'
     client_id = ''
     client_secret = ''
     token = ''
@@ -20,18 +20,18 @@ class TestWallabag(unittest.TestCase):
 
     def test_get_token(self):
         params = {"grant_type": "password",
-                  "client_id": '1_37e16ub8a62oc4gwcg0o0wssks800kw0ok408kkwo4kosgc88g',
-                  "client_secret": '49etxpn66da8okg4cs40sswsog0sskwg4woc400c4w4w8s4wo4',
+                  "client_id": '1_3to3042y05gk8g4wcsk40w40k8kk00s04gwcoo4sows8wskcg0',
+                  "client_secret": 'ift9k07vd20ccg4ocosg0cw4kkgk4o8080848scwg0oosowow',
                   "username": 'foxmask',
                   "password": 'ratatab00m'}
 
-        data = Wallabag.get_token(host='http://localhost:8080', **params)
+        data = Wallabag.get_token(host=self.host, **params)
         self.assertTrue(isinstance(data, str), True)
         return data
 
     def create_entry(self):
         title = 'foobar title'
-        url = 'https://smcomm.trigger-happy.eu/'
+        url = 'https://trigger-happy.eu/'
         tags = ['foo', 'bar']
         starred = 0
         archive = 0
@@ -96,15 +96,6 @@ class TestWallabag(unittest.TestCase):
         data = self.w.post_entry_tags(entry, tags)
         self.assertTrue(data, True)
 
-    """
-    def test_delete_entry_tag(self):
-        entry = self.create_entry()
-        tag = 'bar'
-        self.assertTrue(isinstance(entry['id'], int), True)
-        self.assertTrue(isinstance(tag, str), True)
-        resp = self.w.delete_entry_tag(entry['id'], tag)
-        self.assertTrue(resp, True)
-    """
 
 if __name__ == '__main__':
     unittest.main()
