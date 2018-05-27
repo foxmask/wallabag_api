@@ -16,7 +16,7 @@ to get the project, from your virtualenv, do :
 
 .. code:: python
 
-    git clone https://github.com/foxmask/wallabag-api/
+    git clone https://github.com/push-things/wallabag-api/
 
 
 or
@@ -57,7 +57,7 @@ Creating a post :
 
 this will give you something like this :
 
-.. image:: https://github.com/foxmask/wallabag_api/blob/master/wallabag.png
+.. image:: https://github.com/push-things/wallabag_api/blob/master/wallabag.png
 
 
 
@@ -70,7 +70,7 @@ Then create a client API like explain here http://doc.wallabag.org/en/v2/develop
 
 this will give you somthing like this
 
-.. image:: https://github.com/foxmask/wallabag_api/blob/master/wallabag_api_key.png
+.. image:: https://github.com/push-things/wallabag_api/blob/master/wallabag_api_key.png
 
 Then replace the client_id / client_secret / login / pass to wallabag_test.py and run
 

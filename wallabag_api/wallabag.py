@@ -157,7 +157,8 @@ class Wallabag(object):
 
         return self.query(path, "get", **params)
 
-    def post_entries(self, url, title='', tags='', starred=0, archive=0):
+    def post_entries(self, url, title='', tags='', starred=0, archive=0, content='', language='', published_at='',
+                     authors='', public=1, original_url=''):
         """
         POST /api/entries.{_format}
 
@@ -168,10 +169,18 @@ class Wallabag(object):
         :param tags: tag1,tag2,tag3 a comma-separated list of tags.
         :param starred entry already starred
         :param archive entry already archived
+        :param content additionnal html content
+        :param language
+        :param published_at
+        :param authors
+        :param public
+        :param original_url
         :return result
         """
         params = {'access_token': self.token, 'url': url, 'title': title,
-                  'tags': tags, 'starred': starred, 'archive': archive}
+                  'tags': tags, 'starred': starred, 'archive': archive,
+                  'content': content, 'language': language, 'published_at': published_at,
+                  'authors': authors, 'public': public, 'original_url': original_url}
         if len(tags) > 0 and isinstance(tags, list):
             params['tags'] = ', '.join(tags)
         path = '/api/entries.{ext}'.format(ext=self.format)

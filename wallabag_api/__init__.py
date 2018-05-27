@@ -1,2 +1,2 @@
-VERSION = (1, 1, 3)  # PEP 386
+VERSION = (1, 1, 4)  # PEP 386
 __version__ = ".".join([str(x) for x in VERSION])

@@ -12,7 +12,7 @@ setup(
     long_desc='Wallabag is a "read it later" service, and that Wallabag API allow you to save web pages '
               'to your own account',
     author='FoxMaSk',
-    author_email='foxmask@trigger-happy.eu',
+    author_email='foxmaskhome@gmail.com',
     url='https://github.com/push-things/wallabag_api',
     download_url="https://github.com/push-things/wallabag_api/archive/wallabag_api-" + version + ".zip",
     packages=find_packages(),
