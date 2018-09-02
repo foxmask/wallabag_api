@@ -124,9 +124,10 @@ class Wallabag(object):
         :param kwargs:
         :return: value of the parm
         """
-        value = int(kwargs[what]) if type_attr == 'int' else kwargs[what]
-        if what in kwargs and value in value_attr:
-            return value
+        if what in kwargs:
+            value = int(kwargs[what]) if type_attr == 'int' else kwargs[what]
+            if value in value_attr:
+                return value
 
     # ENTRIES
     async def get_entries(self, **kwargs):
