@@ -14,4 +14,4 @@ Wallabag API
 
 Python API for Wallabag v2.2.3
 
-08/13/2021 - project unarchived and moved to https://gitlab.com/foxmask/wallabag_api
+08/13/2021 - project unarchived and moved to https://git.afpy.org/foxmask/wallabagapi
